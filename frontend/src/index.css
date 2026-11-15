@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream-light: #FBF0E6;
+  --color-peach-soft: #F7E1C9;
+  --color-teal-medium: #65AFB0;
+  --color-teal-deep: #407778;
+  
+  --color-surface-dark: #1D3536;
+  --color-surface-muted: #526D6E;
+  --color-surface-border: #E8D5C2;
+}
+
+:root {
+  --color-cream-light: #FBF0E6;  /* 45% Dominant website background */
+  --color-peach-soft: #F7E1C9;   /* 25% Secondary background, cards & highlights */
+  --color-teal-medium: #65AFB0;  /* 20% Secondary buttons, icons, borders, interactive */
+  --color-teal-deep: #407778;    /* 10% Navbar, primary buttons, headings, focal points */
+  --color-text-main: #1D3536;    /* Legible dark slate-teal */
+  --color-text-muted: #526D6E;   /* Helper text */
+}
+
+body {
+  background-color: #FBF0E6;
+  color: #1D3536;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #407778;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Custom Design System Components */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #407778;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.btn-primary:hover {
+  background-color: #346263;
+}
+.btn-primary:active {
+  background-color: #2B5152;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  color: #1D3536;
+  background-color: #65AFB0;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.btn-secondary:hover {
+  background-color: #579FA0;
+}
+
+.card-cream {
+  background-color: #FBF0E6;
+  border: 1px solid #E8D5C2;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.card-peach {
+  background-color: #F7E1C9;
+  border: 1px solid #E8D5C2;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}

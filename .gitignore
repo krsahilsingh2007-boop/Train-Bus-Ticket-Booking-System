@@ -1,0 +1,19 @@
+# Dependencies and build output
+**/node_modules/
+**/dist/
+**/coverage/
+selenium-tests/target/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Test and runtime output
+*.log
+*.jtl
+jmeter-tests/reports-*/
+
+# Operating system files
+.DS_Store
+Thumbs.db

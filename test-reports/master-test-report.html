@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RailBus Quality Assurance Master Test Report</title>
+  <style>
+    :root {
+      --bg-cream: #FBF0E6;
+      --card-peach: #F7E1C9;
+      --teal-accent: #65AFB0;
+      --teal-deep: #407778;
+      --text-dark: #1D3536;
+      --text-muted: #526D6E;
+      --green-pass: #2E7D32;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .header-card {
+      background-color: var(--card-peach);
+      border: 1px solid #E8D5C2;
+      border-radius: 24px;
+      padding: 32px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 16px rgba(64, 119, 120, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .brand-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--teal-deep);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .badge-enterprise {
+      background-color: rgba(101, 175, 176, 0.2);
+      border: 1px solid var(--teal-accent);
+      color: var(--teal-deep);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 100px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .kpi-card {
+      background-color: var(--card-peach);
+      border: 1px solid #E8D5C2;
+      border-radius: 20px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(64, 119, 120, 0.05);
+    }
+    .kpi-value {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--teal-deep);
+    }
+    .kpi-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--teal-deep);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .table-card {
+      background-color: #FFFFFF;
+      border: 1px solid #E8D5C2;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 12px rgba(64, 119, 120, 0.05);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13px;
+    }
+    thead th {
+      background-color: var(--card-peach);
+      color: var(--teal-deep);
+      font-weight: 700;
+      padding: 14px 18px;
+      border-bottom: 1px solid #E8D5C2;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 11px;
+    }
+    tbody td {
+      padding: 14px 18px;
+      border-bottom: 1px solid #F0E4D7;
+      color: var(--text-dark);
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background-color: #FAF4EE; }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      background-color: #E8F5E9;
+      color: #2E7D32;
+      border: 1px solid #C8E6C9;
+    }
+    .footer-note {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 40px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <div class="header-card">
+      <div>
+        <div class="brand-title">
+          🚆 RailBus Test Automation Report
+          <span class="badge-enterprise">Verified Production Build</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 14px; margin-top: 6px;">
+          Full-Stack Automated Functional Verification (Selenium 4) & Performance Stress Plan (Apache JMeter)
+        </p>
+      </div>
+      <div style="text-align: right;">
+        <div style="font-size: 12px; color: var(--text-muted);">Execution Timestamp</div>
+        <div style="font-weight: 700; color: var(--teal-deep); font-size: 14px;">2/11/2026, 12:31:33 pm</div>
+      </div>
+    </div>
+
+    <!-- Executive KPI Grid -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-value">100.0%</div>
+        <div class="kpi-label">Pass Rate</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value" style="color: #2E7D32;">21 / 21</div>
+        <div class="kpi-label">Tests Passed</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value">304ms</div>
+        <div class="kpi-label">Mean API Latency</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value" style="color: #2E7D32;">0.00%</div>
+        <div class="kpi-label">Concurrency Conflicts</div>
+      </div>
+    </div>
+
+    <!-- Selenium Test Suite Table -->
+    <div class="section-title">
+      <span>🧪</span> Selenium WebDriver Functional & E2E Test Suite (19 Scenarios)
+    </div>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 80px;">Test ID</th>
+            <th style="width: 170px;">Category</th>
+            <th>Scenario Description</th>
+            <th style="width: 100px;">Duration</th>
+            <th style="width: 110px;">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td><strong>TC-01</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Homepage & Discovery</span></td>
+            <td>Verify Homepage Branding & 4-Color Palette Standard</td>
+            <td>12ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>TC-02</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Authentication</span></td>
+            <td>Verify User Registration with Dynamic Cryptographic Credentials</td>
+            <td>177ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>TC-03</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Authentication</span></td>
+            <td>Verify Customer Authentication with Pre-filled Demo Credentials</td>
+            <td>175ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>TC-04</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Authentication</span></td>
+            <td>Verify Invalid Login Credentials Rejection with HTTP 401</td>
+            <td>117ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>TC-05</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Administration</span></td>
+            <td>Verify Administrative Login & Admin Analytics Dashboard Metrics</td>
+            <td>176ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>TC-06</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Journey Discovery</span></td>
+            <td>Verify Railway Search between Any Corridors (Chandigarh ⇄ Mumbai)</td>
+            <td>90ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>TC-07</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Journey Discovery</span></td>
+            <td>Verify Intercity Bus Search between Any Corridors (Bengaluru ⇄ Chennai)</td>
+            <td>15ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>TC-08</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Journey Discovery</span></td>
+            <td>Verify Origin & Destination Mandatory Field Form Validation</td>
+            <td>4ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>TC-09</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Journey Discovery</span></td>
+            <td>Verify Station & City Autocomplete Datalist Endpoints</td>
+            <td>22ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>TC-10</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Seat Selection</span></td>
+            <td>Verify 2D Coach & Deck Interactive Layout with Berth Categorization</td>
+            <td>19ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>TC-11</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Seat Selection</span></td>
+            <td>Verify Berth Pricing in INR (₹) across Sleeper and AC Classes</td>
+            <td>18ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>TC-12</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Seat Selection</span></td>
+            <td>Verify Atomic Seat Hold with 10-Minute Concurrency Expiration</td>
+            <td>21ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>TC-13</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Checkout & Booking</span></td>
+            <td>Verify Mandatory Passenger Fields Validation on Checkout</td>
+            <td>4ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>TC-14</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Payment Gateway</span></td>
+            <td>Verify Simulated Payment Gateway Failure Rejection (QA Simulation)</td>
+            <td>7ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>TC-15</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Payment Gateway</span></td>
+            <td>Verify Payment Success Simulation and Currency Standard (INR - ₹)</td>
+            <td>8ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>TC-16</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Checkout & Booking</span></td>
+            <td>Verify Booking Confirmation & 10-Digit Unique PNR Generation</td>
+            <td>44ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>TC-17</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Checkout & Booking</span></td>
+            <td>Verify Official Cryptographic Boarding Pass PDF Generation & Download</td>
+            <td>66ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>TC-18</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Lifecycle & History</span></td>
+            <td>Verify My Bookings Retrieval and Instant PNR Status Tracking</td>
+            <td>37ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>TC-19</strong></td>
+            <td><span style="color: var(--teal-deep); font-weight: 600;">Lifecycle & History</span></td>
+            <td>Verify Ticket Cancellation and Instant Refund Calculation in INR (₹)</td>
+            <td>32ms</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Apache JMeter Performance Suite Table -->
+    <div class="section-title">
+      <span>⚡</span> Apache JMeter Performance & Concurrency Load Test Suite
+    </div>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 90px;">Plan ID</th>
+            <th>Test Profile</th>
+            <th style="width: 130px;">Threads (Users)</th>
+            <th style="width: 120px;">Throughput</th>
+            <th style="width: 110px;">Avg Latency</th>
+            <th style="width: 110px;">95th % Latency</th>
+            <th style="width: 100px;">Error Rate</th>
+            <th style="width: 110px;">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td><strong>JM-01</strong></td>
+            <td>Load Test: 50 Concurrent Commuters (Search & Discovery)</td>
+            <td><strong>50 concurrent</strong></td>
+            <td>127 req/sec</td>
+            <td>304ms</td>
+            <td>655ms</td>
+            <td style="color: #2E7D32; font-weight: 700;">0.00%</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+          <tr>
+            <td><strong>JM-02</strong></td>
+            <td>Stress Test: 200 Concurrent Commuters (Peak Concurrency)</td>
+            <td><strong>200 concurrent</strong></td>
+            <td>138 req/sec</td>
+            <td>1063ms</td>
+            <td>1415ms</td>
+            <td style="color: #2E7D32; font-weight: 700;">0.00%</td>
+            <td><span class="status-pill">✓ PASSED</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer-note">
+      RailBus Transportation Platform • Built to strict 4-Color Palette (#FBF0E6, #F7E1C9, #65AFB0, #407778) • Standard Currency: INR (₹)
+    </div>
+
+  </div>
+</body>
+</html>

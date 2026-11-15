@@ -1,0 +1,17 @@
+{
+  "name": "railbus-platform",
+  "version": "1.0.0",
+  "description": "RailBus - Online Railway & Bus Ticket Booking System with Selenium and JMeter test automation",
+  "scripts": {
+    "dev": "node scripts/start-site.js",
+    "start": "node scripts/start-site.js",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && node server.js",
+    "test": "node scripts/run-master-tests.js",
+    "test:all": "node scripts/run-master-tests.js",
+    "test:selenium": "cd selenium-tests && mvn test",
+    "test:jmeter": "cd jmeter-tests && jmeter -n -t load-test.jmx -l results-load.jtl -e -o reports-load"
+  },
+  "author": "Antigravity Engineering",
+  "license": "ISC"
+}
